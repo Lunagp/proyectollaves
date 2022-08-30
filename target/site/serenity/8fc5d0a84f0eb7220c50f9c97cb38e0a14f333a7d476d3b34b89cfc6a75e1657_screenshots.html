@@ -39,36 +39,14 @@
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
-<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
-
-<script>
-    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
-
-        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
-        var multipliers = {
-            ms: 1,
-            s: 1000,
-            m: 60000,
-            h: 3600000,
-            d: 86400000
-        };
-
-        if (matches) {
-            var multiplier = multipliers[matches[2].toLowerCase()];
-            return parseFloat(matches[1]) * multiplier;
-        } else {
-            return -1;
-        };
-    };
-</script>
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/link.css"/>
 <link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
@@ -154,7 +132,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-08-2022 11:38</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-08-2022 17:10</span>
     <br style="clear:left"/>
 </div>
 
@@ -214,7 +192,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Unrecognised exception</span>
+                    <span class="error-message error-message-title">Invalid argument exception: invalid argument</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -230,11 +208,11 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.serenitybdd.core.exceptions.UnrecognisedException </h4>
+                    <h4>org.openqa.selenium.InvalidArgumentException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:136)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:102)<br />io.cucumber.datatable.DataTable.convert(DataTable.java:360)<br />io.cucumber.core.stepexpression.StepExpressionFactory.lambda$createExpression$0(StepExpressionFactory.java:66)<br />io.cucumber.core.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:47)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:63)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:99)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:71)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:234)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>co.com.pruebas.llaves.tasks.RegistroUsu.performAs(RegistroUsu.java:43)<br />co.com.prueba.llaves.stepdefinitions.RegistroUsuStepDefinitions.register_a_manager_type_user_with_the_following_data(RegistroUsuStepDefinitions.java:37)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
                 </div>
@@ -244,17 +222,28 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource14008048404333228979.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource6830838563678463943.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="ca4146224e0e9b9e796e1f6762c621198f09b3b23ca1a96876ebc23f88c349a3.png" title=" Given who enters the website and logs in &quot;http://localhost:8080/#/&quot;" width="1366"/>
-                <img src="ca4146224e0e9b9e796e1f6762c621198f09b3b23ca1a96876ebc23f88c349a3.png" title=" luna opens the http://localhost:8080/#/" width="1366"/>
-                <img src="ca4146224e0e9b9e796e1f6762c621198f09b3b23ca1a96876ebc23f88c349a3.png" title=" Given who enters the website and logs in &quot;http://localhost:8080/#/&quot; (completed)" width="1366"/>
-                <img src="ca4146224e0e9b9e796e1f6762c621198f09b3b23ca1a96876ebc23f88c349a3.png" title=" When register a manager type user with the following data
-| username | Anni |
-| password | 123 |: <span class='error-color'>ERROR</span>" width="1366"/>
+                <img src="8f6726ca3acd8d9be24b2ff5891f0e5b0aba936e8b4589ae1704044fdb726082.png" title=" Given who enters the website and logs in &quot;http://localhost:8080/#/&quot;" width="1366"/>
+                <img src="8f6726ca3acd8d9be24b2ff5891f0e5b0aba936e8b4589ae1704044fdb726082.png" title=" Luna opens the http://localhost:8080/#/" width="1366"/>
+                <img src="8f6726ca3acd8d9be24b2ff5891f0e5b0aba936e8b4589ae1704044fdb726082.png" title=" Given who enters the website and logs in &quot;http://localhost:8080/#/&quot; (completed)" width="1366"/>
+                <img src="b171fb9202c81b5c4953b2363d6a70e64782a11ebf10720f06b2d0a3433895a5.png" title=" When register a manager type user with the following data
+| username | password | name | last | id | cel |
+| Anni | 123 | Andres | Sanchez | 6363636363 | 4242424242 |" width="1366"/>
+                <img src="b171fb9202c81b5c4953b2363d6a70e64782a11ebf10720f06b2d0a3433895a5.png" title=" Luna registro usu" width="1366"/>
+                <img src="b171fb9202c81b5c4953b2363d6a70e64782a11ebf10720f06b2d0a3433895a5.png" title=" Luna enters 'Anni' into ingreso de username" width="1366"/>
+                <img src="fac9aef21d3f8b2cbfe7ff98c0d7307555bbcd6a07d1b0fa41112c289d75ddff.png" title=" Luna enters '123' into ingreso de password" width="1366"/>
+                <img src="3999ba5dac43cc52bfa41a68afa2039d29a3b89e7a124851cf71a21576a2f205.png" title=" Luna clicks on boton de ingreso" width="1366"/>
+                <img src="d8689bde9bdd248e448957073501338f463af107e72cc4b33a6365069e9d1d5d.png" title=" Luna clicks on ingresar al registro de usuarios" width="1366"/>
+                <img src="9e5edadcdacae40cfac43a864e946f26e55b1a55db17fca779f2ba797afb7cf1.png" title=" Luna clicks on boton registro de usuarios" width="1366"/>
+                <img src="e0df6e6fa8fb4546e16337bf51193566a702d71a0e55d9035b96e16fa6988fd2.png" title=" Luna enters 'Andres' into Nombres registro de usuarios" width="1366"/>
+                <img src="b437bb76625e19e504d4a6707dd32c2f20c41a9b4a7197cb64f1aeb06b8be308.png" title=" Luna enters 'Sanchez' into Apellidos registro de usuarios" width="1366"/>
+                <img src="2a1674d0792858f2cb3fa60a5409922fc4d3aa088e1d4bc7705f1b6cb5b21968.png" title=" Luna enters '6363636363' into Id registro de usuarios" width="1366"/>
+                <img src="3d066403060bc15b2603d0a8b00297f297f66662d935bf6f625ba8d60dff4cb6.png" title=" Luna enters '4242424242' into Celular registro de usuarios" width="1366"/>
+                <img src="6f5928fced934007a4233d23dc0469afe01a74682e36ecce2a04312dbdc07a03.png" title=" Luna clicks on Selecion de archivos registro de usuarios: <span class='error-color'>ERROR</span>" width="1366"/>
             </div>
         </div>
 
@@ -263,7 +252,7 @@
 </div>
 <div id="beforefooter"></div>
 <div id="bottomfooter">
-    <span class="version">Serenity BDD version 2.3.4</span>
+    <span class="version">Serenity BDD version 2.0.81</span>
 </div>
 </body>
 </html>
