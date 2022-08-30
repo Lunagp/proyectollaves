@@ -18,10 +18,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.*;
 public class RegistroUsuStepDefinitions {
 
 
-    @Before
-    public void inicialize(){
-        setTheStage(new OnlineCast());
-    }
     @Given("^who enters the website and logs in \"([^\"]*)\"$")
     public void who_enters_the_website_and_logs_in(String arg1) {
 
